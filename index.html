@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="icon" href="./Public/Logo.svg" type="image/x-icon" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- <style src="./style/index.css"></style> -->
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggleBtn = document.getElementById("toggleBtn");
+        var sidebar = document.getElementById("side-bar");
+        var closeBtn = document.getElementById("closebtn");
+
+        toggleBtn.addEventListener("click", function () {
+          sidebar.classList.toggle("open");
+        });
+
+        closeBtn.addEventListener("click", function () {
+          sidebar.classList.remove("open");
+        });
+      });
+    </script>
+    <!-- <div class="mainContainer"> -->
+    <div class="sideBar" id="side-bar">
+      <iconify-icon
+        icon="radix-icons:cross-2"
+        style="color: #3c3c3c"
+        class="nav-burger"
+        width="20"
+        height="20"
+        id="closebtn"
+      ></iconify-icon>
+      <h1 class="logo" title="logo">
+        <img class="image" src="./Public/Logo.svg" alt="Logo" />
+      </h1>
+      <div class="navList">
+        <div class="upperNav">
+          <span class="navItems selected"
+            ><iconify-icon
+              icon="ph:house-light"
+              style="color: #005aff"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems"
+            ><iconify-icon
+              icon="ph:bank"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems"
+            ><iconify-icon
+              icon="cil:book"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems"
+            ><iconify-icon
+              icon="ph:archive-tray-light"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems"
+            ><iconify-icon
+              icon="ph:megaphone"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems"
+            ><iconify-icon
+              icon="akar-icons:clipboard"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems"
+            ><iconify-icon
+              icon="ph:wrench"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+        </div>
+
+        <div class="upperNav">
+          <span class="navItems"
+            ><iconify-icon
+              icon="ph:nut-bold"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems"
+            ><iconify-icon
+              icon="ph:question"
+              style="color: #9b9b9b"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+          <span class="navItems logOut"
+            ><iconify-icon
+              icon="ph:sign-out"
+              style="color: red"
+              width="20"
+              height="20"
+            ></iconify-icon
+          ></span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="topNav">
+        <!-- <button > -->
+        <iconify-icon
+          icon="iconamoon:menu-burger-horizontal-bold"
+          style="color: #3c3c3c"
+          class="burger"
+          width="24"
+          height="24"
+          id="toggleBtn"
+        ></iconify-icon>
+        <!-- </button> -->
+
+        <span class="title"
+          >Kamana Saving & Credit Cooperative Ltd. (Branch: Main)</span
+        >
+        <div class="rightNav">
+          <div class="date">
+            <iconify-icon
+              icon="prime:calendar"
+              style="color: #3c3c3c"
+              width="16"
+              height="16"
+            ></iconify-icon>
+            2079/80
+          </div>
+          <div class="seperation"></div>
+          <div class="rightDiv">
+            <span class="smallBox"
+              ><iconify-icon
+                icon="ph:chat-circle-text-bold"
+                style="color: #3c3c3c"
+                width="16"
+                height="16"
+              ></iconify-icon
+            ></span>
+            <span class="smallBox"
+              ><iconify-icon
+                icon="ph:bell-simple-bold"
+                style="color: #3c3c3c"
+                width="16"
+                height="16"
+              ></iconify-icon
+            ></span>
+            <div class="userDiv">
+              <span class="icon"
+                ><iconify-icon
+                  icon="ph:user-bold"
+                  style="color: #3c3c3c"
+                  width="16"
+                  height="16"
+                ></iconify-icon
+              ></span>
+              <span class="name">Username@here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="containerBody">
+        <span class="heading">Dashboard</span>
+        <div class="cardDiv">
+          <div class="statsCard">
+            <div class="desDiv">
+              <span class="icon"
+                ><iconify-icon
+                  icon="ph:user-plus-bold"
+                  style="color: #0d4599"
+                  width="18"
+                  height="18"
+                ></iconify-icon
+              ></span>
+              <span class="text">Active Members</span>
+            </div>
+            <div class="bottomDiv">
+              <div class="dataDiv">
+                <span class="number">7188</span>
+                <div class="status">
+                  <span class="percent">12%</span>
+                  <span class="days">Last 30 days</span>
+                </div>
+              </div>
+              <div class="moreInfo">
+                More Info<iconify-icon
+                  icon="mingcute:right-line"
+                  style="color: #6f6f6f"
+                  width="14"
+                  height="14"
+                ></iconify-icon>
+              </div>
+            </div>
+          </div>
+          <div class="statsCard">
+            <div class="desDiv">
+              <span class="icon" style="background: rgba(231, 152, 0, 0.08)"
+                ><iconify-icon
+                  icon="ph:coin"
+                  style="color: #e79800"
+                  width="18"
+                  height="18"
+                ></iconify-icon
+              ></span>
+              <span class="text">Total Deposit Account Holders</span>
+            </div>
+            <div class="bottomDiv">
+              <div class="dataDiv">
+                <span class="number">7188</span>
+                <div class="status">
+                  <span class="percent">12%</span>
+                  <span class="days">Last 30 days</span>
+                </div>
+              </div>
+              <div class="moreInfo">
+                More Info<iconify-icon
+                  icon="mingcute:right-line"
+                  style="color: #6f6f6f"
+                  width="14"
+                  height="14"
+                ></iconify-icon>
+              </div>
+            </div>
+          </div>
+          <div class="statsCard">
+            <div class="desDiv">
+              <span class="icon"
+                ><iconify-icon
+                  icon="ph:wallet"
+                  style="color: #5950f1"
+                  width="18"
+                  height="18"
+                ></iconify-icon
+              ></span>
+              <span class="text">Total Loanee Account Holders</span>
+            </div>
+            <div class="bottomDiv">
+              <div class="dataDiv">
+                <span class="number">7188</span>
+                <div class="status">
+                  <span class="percent">12%</span>
+                  <span class="days">Last 30 days</span>
+                </div>
+              </div>
+              <div class="moreInfo">
+                More Info<iconify-icon
+                  icon="mingcute:right-line"
+                  style="color: #6f6f6f"
+                  width="14"
+                  height="14"
+                ></iconify-icon>
+              </div>
+            </div>
+          </div>
+          <div class="statsCard">
+            <div class="desDiv">
+              <span class="icon" style="background: rgba(241, 91, 40, 0.08)"
+                ><iconify-icon
+                  icon="solar:folder-outline"
+                  style="color: #f15b28"
+                  width="18"
+                  height="18"
+                ></iconify-icon
+              ></span>
+              <span class="text">Active Members</span>
+            </div>
+            <div class="bottomDiv">
+              <div class="dataDiv">
+                <span class="number">7188</span>
+                <div class="status">
+                  <span class="percent">12%</span>
+                  <span class="days">Last 30 days</span>
+                </div>
+              </div>
+              <div class="moreInfo">
+                More Info<iconify-icon
+                  icon="mingcute:right-line"
+                  style="color: #6f6f6f"
+                  width="14"
+                  height="14"
+                ></iconify-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="graphDiv">
+          <div class="graphContainer">
+            <div class="graphDetails">
+              <span class="graphName">Sales overview</span>
+              <div class="details">
+                (+5) more<span class="date"> in 2021</span>
+              </div>
+            </div>
+            <div class="graph">
+              <img class="graphImage" src="./Public/Graph.svg" alt="graph" />
+            </div>
+          </div>
+          <div class="graphContainer">
+            <div class="graphDetails"></div>
+            <div class="graph">
+              <img class="graphImage" src="./Public/Graph.svg" alt="graph" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

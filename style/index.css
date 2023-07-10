@@ -1,0 +1,417 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("/Public/Gilroy.ttf") format("ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  margin-inline: auto;
+  padding: 0px;
+  display: flex;
+  box-sizing: border-box;
+  .sideBar {
+    .nav-burger {
+      position: absolute;
+      right: 16px;
+      @media only screen and (min-width: 1024px) {
+        display: none;
+      }
+    }
+    display: flex;
+    width: 0px;
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 4px 4px 30px rgba(33, 33, 33, 0.03);
+    transition-duration: 0.3s;
+    transition: 0.3 ease-in-out;
+    z-index: 1;
+    @media only screen and (min-width: 1024px) {
+      gap: 64px;
+      width: 80px;
+      &:hover {
+        width: 10%;
+        transition: 0.3 ease-in-out;
+      }
+    }
+
+    .logo {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+      width: 42px;
+      height: 42px;
+      margin-inline: auto;
+    }
+    .navList {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 48px;
+      height: 100%;
+      max-height: 566px;
+      .navItems {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        height: 36px;
+        width: 48px;
+      }
+      .selected {
+        background: rgba(0, 90, 255, 0.08);
+      }
+      .logOut {
+        color: #ff0000;
+      }
+      .upperNav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  }
+  .open {
+    width: 250px;
+    padding: 24px 16px;
+    @media only screen and (min-width: 1024px) {
+      display: flex;
+      padding: 24px 16px;
+      gap: 64px;
+      width: 80px;
+      &:hover {
+        width: 10%;
+        transition: 0.3 ease-in-out;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 1024px) {
+      left: 80px;
+      width: calc(100% - 80px);
+      gap: 24px;
+    }
+    .topNav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 26px 14px 26px;
+      width: 100%;
+      height: 64px;
+      background: #ffffff;
+      box-shadow: 4px 4px 30px rgba(33, 33, 33, 0.03);
+      /* @media only screen and (min-width: 1024px) {
+        display: none;
+      } */
+      .burger {
+        @media only screen and (min-width: 1024px) {
+          display: none;
+        }
+      }
+      .title {
+        display: none;
+        @media only screen and (min-width: 1024px) {
+          display: block;
+        }
+        font-family: "Gilroy", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+        color: #3c3c3c;
+      }
+      .rightNav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 12px;
+        width: auto;
+        height: 36px;
+        font-family: "Gilroy", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #3c3c3c;
+        .date {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 10px;
+          gap: 6px;
+          width: 97px;
+          height: 36px;
+          background: #f6f6f6;
+          border-radius: 10px;
+          display: none;
+          @media only screen and (min-width: 1024px) {
+            display: flex;
+          }
+        }
+        .seperation {
+          display: none;
+          @media only screen and (min-width: 1024px) {
+            display: block;
+          }
+          height: 100%;
+          width: 0px;
+          border-right: 1px solid #dedede;
+        }
+        .rightDiv {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0px;
+          gap: 8px;
+          width: 235px;
+          height: 36px;
+          .smallBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 10px;
+            gap: 8px;
+            width: 36px;
+            height: 32px;
+            background: #ffffff;
+            border: 1px solid #dedede;
+            border-radius: 10px;
+          }
+          .userDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 10px;
+            gap: 6px;
+            width: 147px;
+            height: 36px;
+            background: #ffffff;
+            border: 1px solid #dedede;
+            border-radius: 10px;
+            .icon {
+              width: 16px;
+              height: 16px;
+            }
+            .name {
+              width: 105px;
+              height: 20px;
+              font-family: "Gilroy", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 140%;
+              color: #3c3c3c;
+            }
+          }
+        }
+      }
+    }
+    .containerBody {
+      width: 100%;
+      height: 100%;
+      padding-inline: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .heading {
+        font-family: "Gilroy", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 140%;
+        color: #212121;
+      }
+      .cardDiv {
+        position: relative;
+        display: flex;
+        gap: calc(16 * 100% / 1308);
+        width: 100%;
+        height: 135px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .statsCard {
+          height: 100%;
+          width: calc(315 * 100% / 1308);
+          min-width: fit-content;
+          display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+          padding: 20px;
+          border-radius: 10px;
+          background: #ffffff;
+          box-shadow: 4px 4px 30px 0px rgba(33, 33, 33, 0.03);
+
+          .desDiv {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            max-width: 100%;
+            .icon {
+              display: flex;
+              padding: 8px 12px;
+              justify-content: center;
+              align-items: center;
+              border-radius: 10px;
+              background: rgba(13, 69, 153, 0.08);
+              height: 34px;
+              width: 42px;
+            }
+            .text {
+              max-width: 100%;
+              color: var(--foundation-neutral-neutral-10, #424242);
+              font-size: 14px;
+              font-family: "Gilroy", sans-serif;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%;
+            }
+          }
+          .bottomDiv {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: flex-end;
+            .dataDiv {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+              max-width: 100%;
+              .number {
+                color: #212121;
+                font-size: 34px;
+                font-weight: 600;
+                line-height: normal;
+              }
+              .status {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 2px;
+                align-self: stretch;
+                .percent {
+                  display: flex;
+                  gap: 4px;
+                  color: #18984f;
+                  font-size: 11px;
+                  font-weight: 600;
+                  line-height: 140%;
+                }
+                .days {
+                  color: var(--foundation-neutral-neutral-7, #9b9b9b);
+                  font-size: 11px;
+                  font-weight: 400;
+                  line-height: 140%;
+                }
+              }
+            }
+            .moreInfo {
+              display: flex;
+              gap: 2px;
+              color: var(--foundation-neutral-neutral-8, #6f6f6f);
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .graphDiv {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 16px;
+        @media only screen and (min-width: 1024px) {
+          flex-direction: row;
+          justify-content: space-between;
+          height: 311px;
+          gap: calc(16.24 * 100% / 1308);
+        }
+        .graphContainer {
+          font-family: "Gilroy", sans-serif;
+          position: relative;
+          height: 311px;
+          width: 100%;
+          border-radius: 10.483px;
+          background: var(--black-amp-white-white, #fff);
+          box-shadow: 0px 2.4460673332214355px 3.843820095062256px 0px
+            rgba(0, 0, 0, 0.02);
+          display: flex;
+          flex-direction: column;
+          gap: 28.65px;
+          padding-top: 19.57px;
+          padding-left: 14.5px;
+          @media only screen and (min-width: 1024px) {
+            width: calc(645.762 * 100% / 1308);
+          }
+          .graphDetails {
+            height: 35.5px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            .graphName {
+              color: var(--gray-gray-700, #2d3748);
+              font-size: 12.58px;
+              /* font-family: Helvetica; */
+              font-weight: 700;
+              line-height: 140%;
+            }
+            .details {
+              color: #48bb78;
+              font-size: 9.784px;
+              font-weight: 700;
+              line-height: 140%;
+              .date {
+                color: var(--foundation-neutral-neutral-7, #9b9b9b);
+              }
+            }
+          }
+          .graph {
+            padding-left: 2px;
+            position: relative;
+            width: calc(617.457 * 100% / 645.762);
+            height: 207.217px;
+            .graphImage {
+              width: 100%;
+              height: 100%;
+              @media only screen and (min-width: 1024px) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
