@@ -4,15 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/index.css" />
+    <link rel="stylesheet" href="../style/layout.css" />
+    <link rel="stylesheet" href="../style/openingBalance.css" />
     <link rel="icon" href="../Public/Logo.svg" type="image/x-icon" />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <!-- <style src="./style/index.css"></style> -->
-    <title>Dashboard</title>
+    <title>Opening Balance</title>
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggleBtn = document.getElementById("toggleBtn");
+        var sidebar = document.getElementById("side-bar");
+        var closeBtn = document.getElementById("closebtn");
+
+        toggleBtn.addEventListener("click", function () {
+          sidebar.classList.toggle("open");
+        });
+
+        closeBtn.addEventListener("click", function () {
+          sidebar.classList.remove("open");
+        });
+      });
+    </script>
     <!-- <div class="mainContainer"> -->
-    <div class="sideBar">
+    <div class="sideBar" id="side-bar">
+      <iconify-icon
+        icon="radix-icons:cross-2"
+        style="color: #3c3c3c"
+        class="nav-burger"
+        width="20"
+        height="20"
+        id="closebtn"
+      ></iconify-icon>
       <h1 class="logo" title="logo">
         <img class="image" src="../Public/Logo.svg" alt="Logo" />
       </h1>
@@ -106,6 +130,17 @@
     </div>
     <div class="container">
       <div class="topNav">
+        <!-- <button > -->
+        <iconify-icon
+          icon="iconamoon:menu-burger-horizontal-bold"
+          style="color: #3c3c3c"
+          class="burger"
+          width="24"
+          height="24"
+          id="toggleBtn"
+        ></iconify-icon>
+        <!-- </button> -->
+
         <span class="title"
           >Kamana Saving & Credit Cooperative Ltd. (Branch: Main)</span
         >
@@ -151,26 +186,161 @@
           </div>
         </div>
       </div>
-      <div class="containerBody">
-        <span class="heading">Opening Balance</span>
-
-        <div class="graphDiv">
-          <div class="graphContainer">
-            <div class="graphDetails">
-              <span class="graphName">Sales overview</span>
-              <div class="details">
-                (+5) more<span class="date"> in 2021</span>
+      <div class="containerBody" style="padding-bottom: 29px">
+        <div class="heading">
+          Opening Balance
+          <form class="searchForm">
+            <input type="search" class="search" placeholder="search" />
+          </form>
+        </div>
+        <div class="content">
+          <div class="leftDiv">
+            <div class="radioDiv">
+              <div class="radioGroup">
+                <input type="radio" name="itemSelection" />
+                Stock Items
+              </div>
+              <div class="radioGroup">
+                <input type="radio" name="itemSelection" />
+                Other Accounts
               </div>
             </div>
-            <div class="graph">
-              <img class="graphImage" src="./Public/Graph.svg" alt="graph" />
+            <div class="dropDownDiv">
+              <div class="dropDownGroup">
+                <label class="label">Collector</label>
+                <div class="selectCover">
+                  <iconify-icon
+                    class="dropIcon"
+                    icon="mingcute:down-line"
+                    style="color: #9b9b9b"
+                    width="16"
+                    height="16"
+                  ></iconify-icon>
+                  <select class="select" name="" id="">
+                    <option value="" selected>All</option>
+                  </select>
+                </div>
+              </div>
+              <div class="dropDownGroup">
+                <label class="label">Samuha</label>
+                <div class="selectCover">
+                  <iconify-icon
+                    class="dropIcon"
+                    icon="mingcute:down-line"
+                    style="color: #9b9b9b"
+                    width="16"
+                    height="16"
+                  ></iconify-icon>
+                  <select class="select" name="" id="">
+                    <option value="" selected>All</option>
+                  </select>
+                </div>
+              </div>
+              <div class="dropDownGroup">
+                <label class="label">A/C Group</label>
+                <div class="selectCover">
+                  <iconify-icon
+                    class="dropIcon"
+                    icon="mingcute:down-line"
+                    style="color: #9b9b9b"
+                    width="16"
+                    height="16"
+                  ></iconify-icon>
+                  <select class="select" name="" id="">
+                    <option value="" selected>All</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="accountName">
+              <span class="accountDetails">Account Name</span>
+              <span class="accountDetails">303 Records</span>
+            </div>
+            <div class="listDiv">
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
+              <div class="listItem">Account Plus | 2074/08/10</div>
             </div>
           </div>
-          <div class="graphContainer">
-            <div class="graphDetails"></div>
-            <div class="graph">
-              <img class="graphImage" src="./Public/Graph.svg" alt="graph" />
+          <div class="seperation"></div>
+          <div class="rightDiv">
+            <div class="topDiv">
+              <div class="detailsDiv">Current Balance: 135733.00 Dr</div>
+              <div class="detailsDiv">Current Date: 2080/02/30</div>
             </div>
+            <form class="form">
+              <div class="formHeading">Set Opening Balance</div>
+              <div class="formRow">
+                <div class="formGroup">
+                  <label class="formLabel">Item Unit</label>
+                  <input type="text" class="inputFeild" placeholder="Sets" />
+                </div>
+                <div class="formGroup">
+                  <label class="formLabel">Stock Qty.</label>
+                  <input type="text" class="inputFeild" placeholder="0.00" />
+                </div>
+              </div>
+              <div class="formRow">
+                <div class="formGroup">
+                  <label class="formLabel">Purchase Rate</label>
+                  <input type="text" class="inputFeild" placeholder="0.00" />
+                </div>
+                <div class="formGroup">
+                  <label class="formLabel">Amount(Rs)</label>
+                  <input type="text" class="inputFeild" placeholder="0.00" />
+                </div>
+              </div>
+              <div class="formRow">
+                <div class="formGroup">
+                  <label class="formLabel">Debit Total</label>
+                  <input type="text" class="inputFeild" placeholder="0.00" />
+                </div>
+                <div class="formGroup">
+                  <label class="formLabel">Credit Total</label>
+                  <input type="text" class="inputFeild" placeholder="0.00" />
+                </div>
+              </div>
+              <div class="formRow">
+                <div class="formGroup">
+                  <label class="formLabel"
+                    >Opening Date (For Deposit) Int Paid Up to (For Loan
+                    Only)</label
+                  >
+                  <input
+                    type="text"
+                    class="inputFeild"
+                    placeholder="2080/02/30"
+                  />
+                </div>
+              </div>
+              <div class="formRow">
+                <div class="formGroup">
+                  <label class="formLabel">Difference</label>
+                  <input type="text" class="inputFeild" placeholder="0.00" />
+                </div>
+              </div>
+              <div class="buttonDiv">
+                <button class="cancel" type="reset">Cancel</button>
+                <button class="submit" type="submit">Update</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
